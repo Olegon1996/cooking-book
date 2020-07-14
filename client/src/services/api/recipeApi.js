@@ -1,4 +1,4 @@
-const url = 'http://localhost:5050/'
+const url = 'https://cooking-b.herokuapp.com/'
 
 export const fetchingRecipes = async ({value}) => {
   try {

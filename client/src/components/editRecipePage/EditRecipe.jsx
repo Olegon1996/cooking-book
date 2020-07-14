@@ -29,13 +29,13 @@ const EditRecipe = () => {
     } else {
       history.push('/')
     }
-  }, [params])
+  }, [params, history, recipes])
 
   useEffect(() => {
     if(!!isRedirect) {
       history.push('/recipes')
     }
-  }, [isRedirect])
+  }, [isRedirect, history])
 
   const handleChangeRecipe = (value, name) => {
     setRecipe({

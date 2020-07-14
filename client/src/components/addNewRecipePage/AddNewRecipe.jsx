@@ -25,7 +25,7 @@ const AddNewRecipe = () => {
     if (!!isRedirect) {
       history.push('/recipes')
     }
-  }, [isRedirect])
+  }, [isRedirect, history])
 
   const handleChangeRecipe = (value, name) => {
     setRecipe({

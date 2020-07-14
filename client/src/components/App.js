@@ -15,6 +15,10 @@ import Loader from "../ui/loader/Loader";
 const App = () => {
   return (
     <React.Fragment>
+      <CustomAlert
+        elevation={5}
+        autoHideDuration={4000}
+      />
       <Loader/>
       <Router>
         <Switch>
@@ -25,10 +29,6 @@ const App = () => {
           <Route component={NotFound}/>
         </Switch>
       </Router>
-      <CustomAlert
-        elevation={5}
-        autoHideDuration={4000}
-      />
     </React.Fragment>
   );
 }

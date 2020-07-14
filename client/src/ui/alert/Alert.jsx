@@ -1,12 +1,10 @@
-import React from 'react';
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
-import {useStyles} from './style';
-import {useDispatch, useSelector} from "react-redux";
-import {TOGGLE_ALERT} from "../../store/actionTypes";
+import React from 'react'
+import Snackbar from '@material-ui/core/Snackbar'
+import MuiAlert from '@material-ui/lab/Alert'
+import {useDispatch, useSelector} from 'react-redux'
+import {TOGGLE_ALERT} from '../../store/actionTypes'
 
 const CustomAlert = ({autoHideDuration, elevation}) => {
-  const classes = useStyles()
   const dispatch = useDispatch()
   const isAlert = useSelector(state => state.globalState.isAlert)
 
@@ -20,7 +18,7 @@ const CustomAlert = ({autoHideDuration, elevation}) => {
         text: '',
         isOpen: false,
       }})
-  };
+  }
 
   return (
       <Snackbar open={isAlert.isOpen} autoHideDuration={autoHideDuration} onClose={handleClose}>
